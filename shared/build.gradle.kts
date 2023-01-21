@@ -14,18 +14,16 @@ kotlin {
     iosSimulatorArm64()
     cocoapods {
         summary = "KMMBridgeSampleKotlin"
-        homepage = "https://touchlab.dev"
+        homepage = "https://github.com/Cherrio-LLC/RealTime"
         ios.deploymentTarget = "13"
     }
 }
 
 android {
-    compileSdk = 32
-
+    compileSdk = 33
+    namespace = "com.cherrio.realtime"
     defaultConfig {
-        minSdk = 21
-        targetSdk = 32
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        minSdk = 25
     }
 }
 
@@ -34,6 +32,6 @@ kmmbridge {
     mavenPublishArtifacts()
     githubReleaseVersions()
     spm()
-    cocoapods("git@github.com:touchlab/PublicPodspecs.git")
-    versionPrefix.set("0.8")
+    cocoapods("git@github.com:Cherrio-LLC/RealTimePodspec.git")
+    versionPrefix.set("0.1")
 }
